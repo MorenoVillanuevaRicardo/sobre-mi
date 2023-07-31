@@ -1,0 +1,70 @@
+*{
+    width: 90%; /* reduje un poco el ancho de la pagina, para que se vea mejor*/
+    margin: auto; 
+  
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*Modifico la fuente del body*/
+    background: lightcoral; /* modifico el color del fondo*/
+    }
+
+header {
+    text-align: center; /*centre el titulo*/
+    color: white; /*cambie el color de la fuente*/
+    background: red; /*puse un color de fondo distinto al resto*/
+    border: 1px solid rgb(13, 6, 117); /*añadi un borde con su color*/
+    width: 1600;  /* fui cambiando los valores para que me quede nivelado con el resto del documento*/
+           
+}
+article{
+    padding: 30px; /*agregue pixeles de padding*/
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    background: skyblue;
+    border: 1px solid rgb(13, 6, 117);
+    width: 1325px;    
+
+}
+
+footer{
+    border: 1px solid rgb(13, 6, 117);
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: black;
+    width: 1600;
+}
+
+li{
+    text-align: left;
+    color: blue;
+    font-size: x-large; /*cambie el tamaño de la fuente, para que no quede tan pequeño*/
+    font-style: oblique;  /*lo puse en cursiva*/  
+}
+
+iframe{
+    display: block;
+    margin: auto;
+    width: 300px;  /*al insertar los videos y las imagenes les di el ancho y alto de 300pixeles*/
+    height: 300px;
+}
+
+img{
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+}
+
+ul{
+    list-style-position: inside ; /*modifique la forma y la posicion de las viñetas*/
+    list-style-type: square;
+}
+
+video{
+    width:300px;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
