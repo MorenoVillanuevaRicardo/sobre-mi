@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Basica</title>
+    <link rel="stylesheet" href="styles.css">  <!-- referencia a la hoja con estilos -->   
+
+</head>    
+    <body>
+        <h1>Calculadora</h1>
+        <form id="formu">
+            <input type="number" id="number1" name="num1" step="any"> <!--entradas de datos, tipo numero, de manera que solo se pueden tipear numeros, y step any para poder ingresar valores decimales-->
+            <input type="number" id="number2" name="num2" step="any"> 
+            <select id="operaciones">
+                <option disabled selected>Elija una operacion </option> <!-- Menu desplegable con las distintas operaciones-->
+                <option value="+">Suma</option>
+                <option value="-">Resta</option>
+                <option value="*">Multiplicacion</option>
+                <option value="/">Division</option>
+            </select>
+            <input type="button" id="igual" value="Calcular" onclick="operacion(operaciones.value)"> <!--boton que al hacer click llama a la funcion que realizar el calculo-->
+            <input type="number" id="resultado" name="resultado" step="any">  <!-- salida del resultado-->
+            <input type="reset" id="reset" value="Borrar"> <!-- boteo de reseteo de los datos en pantalla-->
+        </form>
+        
+        <script src="script.js">   <!-- referencia al archivo .js donde esta alojada las funciones utilizadas--> 
+        </script> 
+    </body>
+</html>     
