@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="encabezado">      <!-- division que tiene el encabezado de la pagina   -->
+            <h1><img src="images/icono.jpg" alt="imagen de piedra papel o tijera" id="icono">PIEDRA PAPEL O TIJERA!</h1> 
+        </div> 
+    </header>
+        <div id="ingresar-nombre" class="ingresar-nombre">  
+           <h2>Presione el boton  para empezar a jugar</h2> 
+           <button type="button" id="inicio"  onclick="obtenerNombreJugador()"> Comience el juego! </button> <!-- boton para ingresar el nombre del jugador  -->
+        </div> 
+    
+        <div class="contenedor" id="juego"> <!-- la estructura se encuentra dividida en 3 secciones: seccion del jugador, seccion donde se muestran los datos del juego y seccion de la pc. Al principio se encuentran ocultas  -->            
+                <div class="lado-jugador" id="lado-jugador" style="display: none;"> <!--todas las datos del jugador se muestran en esta seccion -->
+                    <div id="datos-jugador">
+                        <p id="nom-jug">Nombre : </p>  
+                        <p id="nombre-jugador"></p>
+                        <input type="text" id="nombre" value="" style="display: none;"   disabled>  <!-- campo donde se guarda el nombre del jugador, pero no se muestra en pantalla   -->
+                        <input type="text" id="eleccion" style="display: none;"  disabled> <!-- campo donde se guarda la eleccion del jugador, pero no se muestra en pantalla   -->
+                    </div>
+                    <div class="opciones" id="opciones">  <!-- imagenes que cumplen la funcion de menu de opciones  -->
+                        <img  src="images/piedra.png" alt="imagen de una piedra" id="piedra" onclick="capturarClick(piedra)" >
+                        <img  src="images/papel.png"  alt="imagen de papel" id="papel" onclick="capturarClick(papel)" > 
+                        <img  src="images/tijera.png" alt="imagen de una tijera" id="tijera" onclick="capturarClick(tijera)" >
+                    </div>
+
+                    <p>Victorias jugador : <input type="number" id="victorias-jugador" value="0" disabled> </p>  <!-- campo donde se actualizar el marcador del jugador -->
+
+                </div>              
+               
+                <div class="datos-juego" id="datos-juego" style="display: none;">  <!--seccion de campos que muestra los resultados de las rondas, el numero, y el resultado final -->
+                    <p id="instrucciones"> Haga click sobre una de las imagenes del sector izquierdo para realizar su eleccion!</p>
+                    <p id="ronda">Ronda Numero <input type="number" id="rondaNro" value="1" disabled></p> <!--campo donde se muestra el numero de ronda-->
+                    <p id="resultado-ronda"></p>
+                    <input type="button" id="next" value="Siguiente Ronda" onclick="siguienteRonda()"> <!--boton para avanzar a la siguiente ronda-->
+                    <p id="resultado-juego"></p>                    
+                </div>
+                <div id="lado-pc" style="display: none;" >
+                    <div id="datos-pc">
+                        <p id="nom-pc">Computer name : R2-D2</p>                        
+                    </div>  
+                    <div id="opciones-pc">  <!--opciones que podria "elegir" la pc  -->
+                        <img src="images/piedra.png" id="piedra-pc" >
+                        <img src="images/papel.png"  id="papel-pc"> 
+                        <img src="images/tijera.png"  id="tijera-pc">
+                    </div> 
+                   <p>Victorias de la pc: <input type="number" id="victorias-pc" value="0" disabled> </p> <!-- campo donde se actualizar el marcador de la pc -->
+                </div>
+                 
+        </div>
+    
+
+    
+
+<footer> 
+    <input type="button" id="reset" value="Reiniciar Juego" onclick="location.reload(true)" style="display: none;"> <!--boton que sirve para reiniciar el juego (funciona como un f5)-->
+</footer>    
+</body>
+<script src="script.js"></script>
+</html>
